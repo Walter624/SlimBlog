@@ -1,0 +1,11 @@
+# Composer
+composer.phar
+
+# PHPStorm
+.idea/*
+
+# Cache & Logs
+app/cache/*
+!app/cache/.gitkeep
+app/logs/*
+!app/logs/.gitkeep
