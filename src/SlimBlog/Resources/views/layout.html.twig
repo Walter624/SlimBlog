@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}ImageMe{% endblock %}</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block body %}
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Slimblog</a>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-exl-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                {% if app.user %}
+                    <li><a href="{{ path('photo_index') }}">Photo</a></li>
+                    <li><a href="{{ path('user_settings') }}">Settings</a></li>
+                    <li><a href="{{ path('logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ path('login') }}">Log In</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container layout">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <div class="row text-center">
+            <p>Copyright &copy; ImageMe 2014</p>
+        </div>
+    </footer>
+</body>
+</html>

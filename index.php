@@ -24,4 +24,3 @@ foreach (glob(__DIR__ . '/src/SlimBlog/Resources/routes/*.php') as $router) {
 
 // Run
 $app->run();
-
