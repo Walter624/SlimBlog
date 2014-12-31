@@ -42,7 +42,7 @@ class Post
      * @param \DateTime $updatedAt
      * @param bool $isActive
      */
-    public function __contruct(
+    public function __construct(
         $id,
         $title,
         $content,

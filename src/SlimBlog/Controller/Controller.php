@@ -20,7 +20,7 @@ abstract class Controller
     }
 
     /**
-     * Renders a template, if there is no .php extenstion it will be
+     * Renders a template, if there is no .php extension it will be
      * @param string $name Template to render
      * @param array $data
      * @param null $status

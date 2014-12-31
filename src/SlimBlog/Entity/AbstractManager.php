@@ -12,7 +12,7 @@ abstract class AbstractManager
     /**
      * @param \PDO $db
      */
-    public function __contruct(\PDO $db)
+    public function __construct(\PDO $db)
     {
         $this->db = $db;
     }

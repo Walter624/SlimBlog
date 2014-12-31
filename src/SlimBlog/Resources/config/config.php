@@ -10,5 +10,5 @@ return [
     'db.password' => 'root',
     'db.host' => 'localhost',
     'db.port' => '3306',
-    'db.driver' => ',mysql'
+    'db.driver' => 'mysql'
 ];

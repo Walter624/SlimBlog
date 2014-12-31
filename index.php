@@ -11,8 +11,8 @@ $app = new Slim(require_once __DIR__ . '/src/SlimBlog/Resources/config/config.ph
 
 // Set DB
 $app->container->set('db', new \PDO(
-    $app->config('db.driver') . ':dbname=' . $app->config('db.name') . ';host=' .
-        $app->config('db.host') . ';port=' . $app->config('db.port'),
+    $app->config('db.driver') . ':db.name=' .
+        $app->config('db.name') . ';host=' . $app->config('db.host') . ';port=' . $app->config('db.port'),
     $app->config('db.user'),
     $app->config('db.password')
 ));
@@ -24,4 +24,3 @@ foreach (glob(__DIR__ . '/src/SlimBlog/Resources/routes/*.php') as $router) {
 
 // Run
 $app->run();
-

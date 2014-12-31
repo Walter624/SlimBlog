@@ -13,7 +13,7 @@ class BlogController extends Controller
     }
 
     /**
-     * @param in $id
+     * @param int $id
      */
     public function getBlogPostAction($id)
     {
