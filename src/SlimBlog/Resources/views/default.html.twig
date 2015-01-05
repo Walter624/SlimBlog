@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="/web/bundles/slimblog/css/style.css">
-    </head>
-    <body>
+{% extends "layout.html.twig" %}
 
-    <header>
-        <h1>SlimBlog</h1>
-    </header>
+{% block content %}
+    <hr>
 
-    <section>
-        <h1>My SlimBlog</h1>
-        <p>
-            Testing
-        </p>
-        <p>
-            Testing!!
-        </p>
-    </section>
+    <div class="row">
+        <div class="col-lg-8 col-sm-8">
+            <h2>What We Do</h2>
+            <p>Testing Blog.</p>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <h2>Contact Us</h2>
+            <address>
+                <strong>SlimBlog Test.</strong>
+                <br>123 Fake Street, Suite #60
+                <br>New York, NY 12345
+                <br>
+            </address>
+            <address>
+                <abbr title="Phone">P:</abbr>(123) 456-7890
+                <br>
+                <abbr title="Email">E:</abbr> <a href="mailto:#">support@me.com</a>
+            </address>
+        </div>
+    </div>
 
-    <footer>
-        Copyright Me
-    </footer>
-
-    </body>
-</html>
+{% endblock %}
