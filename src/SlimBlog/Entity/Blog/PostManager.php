@@ -37,10 +37,13 @@ class PostManager extends AbstractManager
      */
     public function fetchByLatest($page = 1)
     {
-        $statement = $this->db->prepare(
-            'SELECT * FROM posts WHERE is_active = 1 ORDER BY published_at LIMIT 10 OFFSET :offset'
+        ini_set('error_reporting', E_ALL | E_STRICT);
+        ini_set('display_errors', 1);
+       $statement = $this->db->prepare(
+           'SELECT * FROM slimblog.`posts`'
+            //'SELECT * FROM slimblog.`posts` WHERE slimblog.`posts`.is_active = 1 ORDER BY slimblog.`posts`.published_at LIMIT 10 OFFSET :offset'
         );
-        $statement->bindValue('offset', 10 * ($page - 1));
+        //$statement->bindValue('offset', 10 * ($page - 1));
         $statement->execute();
 
         $blogPosts = [];

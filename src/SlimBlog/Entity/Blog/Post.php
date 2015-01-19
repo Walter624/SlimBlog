@@ -48,7 +48,7 @@ class Post
         $content,
         \DateTime $createdAt,
         \DateTime $publishedAt,
-        \DateTime $updatedAt,
+        \DateTime $updatedAt = null,
         $isActive = true
     ) {
         $this->id = $id;
