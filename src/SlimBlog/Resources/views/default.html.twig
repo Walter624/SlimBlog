@@ -1,6 +1,7 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
+    <h3>Posts</h3>
     <ul>
         {% for post in posts %}
             <li> {{ post.title }} {{ post.content }}</li>
