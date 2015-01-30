@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>{% block title %}SlimBlog{% endblock %}</title>
-    <link rel=”stylesheet” href=”css/bootstrap.css”  type=”text/css”/>
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <body>
 {% block body %}
     <div class="container">
@@ -28,16 +28,15 @@
         </div>
 
         <div class="row">
-            <div class="span4">
+            <div class="col-sm-4">
                 <ul class="nav nav-list">
-                    <li class="nav-header">Who!!</li>
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="span8">
+            <div class="col-sm-4">
                 <h3>How it started</h3>
 
                 <p>Dummy Text</p>
@@ -46,10 +45,10 @@
         </div>
 
         <div class="row">
-            <div class="span4">
+            <div class="col-sm-4">
                 {% block content %}{% endblock %}
             </div>
-            <div class="span4">
+            <div class="col-sm-4">
                 <h4 class="muted text-center">Contact</h4>
                 <p>contact</p>
                 <a href="#" class="btn btn-info">Contact Me</a>
